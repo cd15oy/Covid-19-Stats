@@ -64,7 +64,7 @@ for province,index in zip(provinces, range(len(provinces)-1)):
         plt.savefig("docs/"+province + "-" + stats[plot][0] + ".png")
         plt.close()
 
-        markdown += '![alt text](' + province.replace(' ','%20') + "-" + stats[plot][0] + ".png " + '"' + province + "-" + stats[plot][0] + '")\n'
+        markdown += '!['+  province + "-" + stats[plot][0] + '](' + province.replace(' ','%20') + "-" + stats[plot][0] + ".png " + '"' + province + "-" + stats[plot][0] + '")\n\n'
 
 with open("docs/page.md", 'w') as outF:
     outF.write(markdown)
