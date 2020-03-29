@@ -1,6 +1,6 @@
 # British Columbia
 ## British Columbia-Infected
-![alt text](British%Columbia-Infected.png"British%Columbia-Infected")
+![alt text](British%Columbia-Infected.png "British%Columbia-Infected")
 ## British Columbia-Recovered
 ![alt text](British%Columbia-Recovered.png"British%Columbia-Recovered")
 ## British Columbia-Deceased
