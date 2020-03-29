@@ -29,7 +29,9 @@ with open("stats.csv" , 'r') as inF:
             province[3].append(line[2])
 
 
+markdown = "" 
 for province,index in zip(provinces, range(len(provinces)-1)):
+    markdown += "# " +province + "\n"
     for plot in range(1,4):
         stats = data[index]
         total=0
@@ -51,6 +53,7 @@ for province,index in zip(provinces, range(len(provinces)-1)):
             stepSize = 1
         plt.yticks(range(0,int(max(totalList) + 0.1*max(totalList)), stepSize))
         plt.title(province + "-" + stats[plot][0])
+        markdown += "## " + province + "-" + stats[plot][0] + "\n"
         xAx = stats[0][1:]
         yAx = stats[plot][1:] 
         
@@ -60,3 +63,8 @@ for province,index in zip(provinces, range(len(provinces)-1)):
         plt.legend((p1[0], p2[0]), ('Total', 'Daily'))
         plt.savefig("docs/"+province + "-" + stats[plot][0] + ".png")
         plt.close()
+
+        markdown += '![alt text](' + province.replace(' ','%') + "-" + stats[plot][0] + ".png" + '"' + province.replace(' ','%') + "-" + stats[plot][0] + '")\n'
+
+with open("docs/page.md", 'w') as outF:
+    outF.write(markdown)
