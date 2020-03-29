@@ -29,7 +29,7 @@ with open("stats.csv" , 'r') as inF:
             province[3].append(line[2])
 
 
-for province,index in zip(provinces, range(len(provinces))):
+for province,index in zip(provinces, range(len(provinces)-1)):
     for plot in range(1,4):
         stats = data[index]
         total=0
@@ -58,5 +58,5 @@ for province,index in zip(provinces, range(len(provinces))):
         p1 = plt.bar(xAx,totalList)
         p2 = plt.bar(xAx,yAx)
         plt.legend((p1[0], p2[0]), ('Total', 'Daily'))
-        plt.savefig(province + "-" + stats[plot][0] + ".png")
+        plt.savefig("docs/"+province + "-" + stats[plot][0] + ".png")
         plt.close()
