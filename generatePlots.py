@@ -64,7 +64,7 @@ for province,index in zip(provinces, range(len(provinces)-1)):
         plt.savefig("docs/"+province + "-" + stats[plot][0] + ".png")
         plt.close()
 
-        markdown += '!['+  province + "-" + stats[plot][0] + '](' + province.replace(' ','%20') + "-" + stats[plot][0] + ".png " ')\n\n'
+        markdown += '![](' + province.replace(' ','%20') + "-" + stats[plot][0] + ".png " + '"' + province + "-" + stats[plot][0] + '")\n\n'
 
 
 markdown += "# Source\n"
