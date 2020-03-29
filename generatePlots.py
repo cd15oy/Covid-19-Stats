@@ -64,7 +64,10 @@ for province,index in zip(provinces, range(len(provinces)-1)):
         plt.savefig("docs/"+province + "-" + stats[plot][0] + ".png")
         plt.close()
 
-        markdown += '!['+  province + "-" + stats[plot][0] + '](' + province.replace(' ','%20') + "-" + stats[plot][0] + ".png " + '"' + province + "-" + stats[plot][0] + '")\n\n'
+        markdown += '!['+  province + "-" + stats[plot][0] + '](' + province.replace(' ','%20') + "-" + stats[plot][0] + ".png " ')\n\n'
 
+
+markdown += "# Source\n"
+markdown += "All counts taken from [CTV](https://www.ctvnews.ca/health/coronavirus/tracking-every-case-of-covid-19-in-canada-1.4852102)\n\n"
 with open("docs/page.md", 'w') as outF:
     outF.write(markdown)
