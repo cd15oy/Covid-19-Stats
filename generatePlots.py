@@ -7,26 +7,38 @@ import matplotlib.pyplot as plt
 provinces = [] 
 data = []
 
+csv_columns = None
+
 with open("stats.csv" , 'r') as inF:
     province = None
     for row in inF:
+        if csv_columns is None:
+            csv_columns = row.strip().split(",")
+            continue
+
         line = row.split(",")
-        if len(line) == 1:
-            provinces.append(row.strip())
+        cur_province = line[0].strip()
+
+        # that is, if this is a new province to add
+        if cur_province not in provinces:
+            provinces.append(cur_province)
+
+            # if there was a previous province
             if province is not None:
                 data.append(province)
+            
             province = [[],[],[],[]] 
-            line = next(inF).split(',') 
-            province[0].append("Date")
-            province[1].append(line[0].strip())
-            province[2].append(line[1].strip())
-            province[3].append(line[2].strip())
-        else:
-            line = [float(x.strip()) for x in row.split(",")[1:]]
-            province[0].append(row.split(',')[0].strip())
-            province[1].append(line[0])
-            province[2].append(line[1])
-            province[3].append(line[2])
+            province[0].append(csv_columns[1])
+            province[1].append(csv_columns[2])
+            province[2].append(csv_columns[3])
+            province[3].append(csv_columns[4])
+
+
+        line = [float(x.strip()) for x in row.split(",")[2:]]
+        province[0].append(row.split(',')[1].strip())
+        province[1].append(line[0])
+        province[2].append(line[1])
+        province[3].append(line[2])
 
 
 markdown = "" 
