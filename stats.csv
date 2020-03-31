@@ -63,6 +63,8 @@ British Columbia,March 25,42,0,0
 British Columbia,March 26,66,3,0
 British Columbia,March 27,67,89,2
 British Columbia,March 28,92,121,1
+British Columbia,March 29,0,0,0
+British Columbia,March 30,86,29,2
 Alberta,January 25,0,0,0
 Alberta,January 26,0,0,0
 Alberta,January 27,0,0,0
@@ -127,6 +129,8 @@ Alberta,March 25,61,0,0
 Alberta,March 26,67,27,0
 Alberta,March 27,56,6,0
 Alberta,March 28,79,0,0
+Alberta,March 29,40,0,1
+Alberta,March 30,29,0,5
 Saskatchewan,January 25,0,0,0
 Saskatchewan,January 26,0,0,0
 Saskatchewan,January 27,0,0,0
@@ -191,6 +195,8 @@ Saskatchewan,March 25,14,0,0
 Saskatchewan,March 26,9,0,0
 Saskatchewan,March 27,9,0,0
 Saskatchewan,March 28,30,0,0
+Saskatchewan,March 29,22,4,0
+Saskatchewan,March 30,20,0,2
 Manitoba,January 25,0,0,0
 Manitoba,January 26,0,0,0
 Manitoba,January 27,0,0,0
@@ -255,6 +261,8 @@ Manitoba,March 25,14,0,0
 Manitoba,March 26,1,0,0
 Manitoba,March 27,3,0,1
 Manitoba,March 28,25,0,0
+Manitoba,March 29,8,2,0
+Manitoba,March 30,24,0,0
 Ontario,January 25,1,0,0
 Ontario,January 26,0,0,0
 Ontario,January 27,1,0,0
@@ -320,6 +328,7 @@ Ontario,March 26,170,0,2
 Ontario,March 27,135,0,3
 Ontario,March 28,151,0,1
 Ontario,March 29,211,0,2
+Ontario,March 30,351,423,10
 Quebec,January 25,0,0,0
 Quebec,January 26,0,0,0
 Quebec,January 27,0,0,0
@@ -384,6 +393,8 @@ Quebec,March 25,326,0,2
 Quebec,March 26,290,1,2
 Quebec,March 27,392,28,10
 Quebec,March 28,477,0,4
+Quebec,March 29,342,0,0
+Quebec,March 30,590,0,3
 New Brunswick,January 25,0,0,0
 New Brunswick,January 26,0,0,0
 New Brunswick,January 27,0,0,0
@@ -448,6 +459,8 @@ New Brunswick,March 25,8,0,0
 New Brunswick,March 26,7,0,0
 New Brunswick,March 27,12,0,0
 New Brunswick,March 28,6,0,0
+New Brunswick,March 29,15,2,0
+New Brunswick,March 30,2,0,0
 Nova Scotia,January 25,0,0,0
 Nova Scotia,January 26,0,0,0
 Nova Scotia,January 27,0,0,0
@@ -512,6 +525,8 @@ Nova Scotia,March 25,17,0,0
 Nova Scotia,March 26,5,0,0
 Nova Scotia,March 27,17,0,0
 Nova Scotia,March 28,20,0,0
+Nova Scotia,March 29,12,0,0
+Nova Scotia,March 30,5,10,0
 Prince Edward Island,January 25,0,0,0
 Prince Edward Island,January 26,0,0,0
 Prince Edward Island,January 27,0,0,0
@@ -575,6 +590,9 @@ Prince Edward Island,March 24,0,0,0
 Prince Edward Island,March 25,2,0,0
 Prince Edward Island,March 26,4,1,0
 Prince Edward Island,March 27,2,0,0
+Prince Edward Island,March 28,0,0,0
+Prince Edward Island,March 29,0,0,0
+Prince Edward Island,March 30,7,0,0
 Newfoundland and Labrador,January 25,0,0,0
 Newfoundland and Labrador,January 26,0,0,0
 Newfoundland and Labrador,January 27,0,0,0
@@ -639,6 +657,8 @@ Newfoundland and Labrador,March 25,32,0,0
 Newfoundland and Labrador,March 26,15,0,0
 Newfoundland and Labrador,March 27,20,0,0
 Newfoundland and Labrador,March 28,18,4,0
+Newfoundland and Labrador,March 29,15,0,0
+Newfoundland and Labrador,March 30,13,0,1
 Yukon,January 25,0,0,0
 Yukon,January 26,0,0,0
 Yukon,January 27,0,0,0
@@ -703,6 +723,8 @@ Yukon,March 25,1,0,0
 Yukon,March 26,0,0,0
 Yukon,March 27,1,0,0
 Yukon,March 28,0,0,0
+Yukon,March 29,0,0,0
+Yukon,March 30,1,0,0
 Northwest Territories,January 25,0,0,0
 Northwest Territories,January 26,0,0,0
 Northwest Territories,January 27,0,0,0
@@ -767,6 +789,8 @@ Northwest Territories,March 25,0,0,0
 Northwest Territories,March 26,0,0,0
 Northwest Territories,March 27,0,0,0
 Northwest Territories,March 28,0,0,0
+Northwest Territories,March 29,0,0,0
+Northwest Territories,March 30,0,0,0
 Nunavut,January 25,0,0,0
 Nunavut,January 26,0,0,0
 Nunavut,January 27,0,0,0
@@ -831,3 +855,5 @@ Nunavut,March 25,0,0,0
 Nunavut,March 26,0,0,0
 Nunavut,March 27,0,0,0
 Nunavut,March 28,0,0,0
+Nunavut,March 29,0,0,0
+Nunavut,March 30,0,0,0
