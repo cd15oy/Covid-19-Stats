@@ -98,7 +98,7 @@ for province,index in zip(provinces, range(len(provinces)-1)):
     if stepSize == 0:
         stepSize = 1
     plt.yticks(range(0,int(maxVal + 0.1*maxVal +1), stepSize))
-    plt.title(province + "-" + stats[plot][0])
+    plt.title(province + "-Trends")
     markdown += "## " + province + "-Trends\n"
     
     xAx = stats[0][1:]

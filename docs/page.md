@@ -8,7 +8,7 @@
 ## British Columbia-Deceased
 ![](British%20Columbia-Deceased.png "British Columbia-Deceased")
 
-## British Columbia-Deceased
+## British Columbia-Trends
 ![](British%20Columbia-Trends.png "British Columbia-Trends")
 
 # Alberta
@@ -21,7 +21,7 @@
 ## Alberta-Deceased
 ![](Alberta-Deceased.png "Alberta-Deceased")
 
-## Alberta-Deceased
+## Alberta-Trends
 ![](Alberta-Trends.png "Alberta-Trends")
 
 # Saskatchewan
@@ -34,7 +34,7 @@
 ## Saskatchewan-Deceased
 ![](Saskatchewan-Deceased.png "Saskatchewan-Deceased")
 
-## Saskatchewan-Deceased
+## Saskatchewan-Trends
 ![](Saskatchewan-Trends.png "Saskatchewan-Trends")
 
 # Manitoba
@@ -47,7 +47,7 @@
 ## Manitoba-Deceased
 ![](Manitoba-Deceased.png "Manitoba-Deceased")
 
-## Manitoba-Deceased
+## Manitoba-Trends
 ![](Manitoba-Trends.png "Manitoba-Trends")
 
 # Ontario
@@ -60,7 +60,7 @@
 ## Ontario-Deceased
 ![](Ontario-Deceased.png "Ontario-Deceased")
 
-## Ontario-Deceased
+## Ontario-Trends
 ![](Ontario-Trends.png "Ontario-Trends")
 
 # Quebec
@@ -73,7 +73,7 @@
 ## Quebec-Deceased
 ![](Quebec-Deceased.png "Quebec-Deceased")
 
-## Quebec-Deceased
+## Quebec-Trends
 ![](Quebec-Trends.png "Quebec-Trends")
 
 # New Brunswick
@@ -86,7 +86,7 @@
 ## New Brunswick-Deceased
 ![](New%20Brunswick-Deceased.png "New Brunswick-Deceased")
 
-## New Brunswick-Deceased
+## New Brunswick-Trends
 ![](New%20Brunswick-Trends.png "New Brunswick-Trends")
 
 # Nova Scotia
@@ -99,7 +99,7 @@
 ## Nova Scotia-Deceased
 ![](Nova%20Scotia-Deceased.png "Nova Scotia-Deceased")
 
-## Nova Scotia-Deceased
+## Nova Scotia-Trends
 ![](Nova%20Scotia-Trends.png "Nova Scotia-Trends")
 
 # Prince Edward Island
@@ -112,7 +112,7 @@
 ## Prince Edward Island-Deceased
 ![](Prince%20Edward%20Island-Deceased.png "Prince Edward Island-Deceased")
 
-## Prince Edward Island-Deceased
+## Prince Edward Island-Trends
 ![](Prince%20Edward%20Island-Trends.png "Prince Edward Island-Trends")
 
 # Newfoundland and Labrador
@@ -125,7 +125,7 @@
 ## Newfoundland and Labrador-Deceased
 ![](Newfoundland%20and%20Labrador-Deceased.png "Newfoundland and Labrador-Deceased")
 
-## Newfoundland and Labrador-Deceased
+## Newfoundland and Labrador-Trends
 ![](Newfoundland%20and%20Labrador-Trends.png "Newfoundland and Labrador-Trends")
 
 # Yukon
@@ -138,7 +138,7 @@
 ## Yukon-Deceased
 ![](Yukon-Deceased.png "Yukon-Deceased")
 
-## Yukon-Deceased
+## Yukon-Trends
 ![](Yukon-Trends.png "Yukon-Trends")
 
 # Northwest Territories
@@ -151,7 +151,7 @@
 ## Northwest Territories-Deceased
 ![](Northwest%20Territories-Deceased.png "Northwest Territories-Deceased")
 
-## Northwest Territories-Deceased
+## Northwest Territories-Trends
 ![](Northwest%20Territories-Trends.png "Northwest Territories-Trends")
 
 # Source
