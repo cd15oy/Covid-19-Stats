@@ -8,6 +8,9 @@
 ## British Columbia-Deceased
 ![](British%20Columbia-Deceased.png "British Columbia-Deceased")
 
+## British Columbia-Deceased
+![](British%20Columbia-Trends.png "British Columbia-Trends")
+
 # Alberta
 ## Alberta-Infected
 ![](Alberta-Infected.png "Alberta-Infected")
@@ -17,6 +20,9 @@
 
 ## Alberta-Deceased
 ![](Alberta-Deceased.png "Alberta-Deceased")
+
+## Alberta-Deceased
+![](Alberta-Trends.png "Alberta-Trends")
 
 # Saskatchewan
 ## Saskatchewan-Infected
@@ -28,6 +34,9 @@
 ## Saskatchewan-Deceased
 ![](Saskatchewan-Deceased.png "Saskatchewan-Deceased")
 
+## Saskatchewan-Deceased
+![](Saskatchewan-Trends.png "Saskatchewan-Trends")
+
 # Manitoba
 ## Manitoba-Infected
 ![](Manitoba-Infected.png "Manitoba-Infected")
@@ -37,6 +46,9 @@
 
 ## Manitoba-Deceased
 ![](Manitoba-Deceased.png "Manitoba-Deceased")
+
+## Manitoba-Deceased
+![](Manitoba-Trends.png "Manitoba-Trends")
 
 # Ontario
 ## Ontario-Infected
@@ -48,6 +60,9 @@
 ## Ontario-Deceased
 ![](Ontario-Deceased.png "Ontario-Deceased")
 
+## Ontario-Deceased
+![](Ontario-Trends.png "Ontario-Trends")
+
 # Quebec
 ## Quebec-Infected
 ![](Quebec-Infected.png "Quebec-Infected")
@@ -57,6 +72,9 @@
 
 ## Quebec-Deceased
 ![](Quebec-Deceased.png "Quebec-Deceased")
+
+## Quebec-Deceased
+![](Quebec-Trends.png "Quebec-Trends")
 
 # New Brunswick
 ## New Brunswick-Infected
@@ -68,6 +86,9 @@
 ## New Brunswick-Deceased
 ![](New%20Brunswick-Deceased.png "New Brunswick-Deceased")
 
+## New Brunswick-Deceased
+![](New%20Brunswick-Trends.png "New Brunswick-Trends")
+
 # Nova Scotia
 ## Nova Scotia-Infected
 ![](Nova%20Scotia-Infected.png "Nova Scotia-Infected")
@@ -77,6 +98,9 @@
 
 ## Nova Scotia-Deceased
 ![](Nova%20Scotia-Deceased.png "Nova Scotia-Deceased")
+
+## Nova Scotia-Deceased
+![](Nova%20Scotia-Trends.png "Nova Scotia-Trends")
 
 # Prince Edward Island
 ## Prince Edward Island-Infected
@@ -88,6 +112,9 @@
 ## Prince Edward Island-Deceased
 ![](Prince%20Edward%20Island-Deceased.png "Prince Edward Island-Deceased")
 
+## Prince Edward Island-Deceased
+![](Prince%20Edward%20Island-Trends.png "Prince Edward Island-Trends")
+
 # Newfoundland and Labrador
 ## Newfoundland and Labrador-Infected
 ![](Newfoundland%20and%20Labrador-Infected.png "Newfoundland and Labrador-Infected")
@@ -97,6 +124,9 @@
 
 ## Newfoundland and Labrador-Deceased
 ![](Newfoundland%20and%20Labrador-Deceased.png "Newfoundland and Labrador-Deceased")
+
+## Newfoundland and Labrador-Deceased
+![](Newfoundland%20and%20Labrador-Trends.png "Newfoundland and Labrador-Trends")
 
 # Yukon
 ## Yukon-Infected
@@ -108,6 +138,9 @@
 ## Yukon-Deceased
 ![](Yukon-Deceased.png "Yukon-Deceased")
 
+## Yukon-Deceased
+![](Yukon-Trends.png "Yukon-Trends")
+
 # Northwest Territories
 ## Northwest Territories-Infected
 ![](Northwest%20Territories-Infected.png "Northwest Territories-Infected")
@@ -117,6 +150,9 @@
 
 ## Northwest Territories-Deceased
 ![](Northwest%20Territories-Deceased.png "Northwest Territories-Deceased")
+
+## Northwest Territories-Deceased
+![](Northwest%20Territories-Trends.png "Northwest Territories-Trends")
 
 # Source
 All counts taken from [CTV](https://www.ctvnews.ca/health/coronavirus/tracking-every-case-of-covid-19-in-canada-1.4852102)
