@@ -68,6 +68,9 @@ British Columbia,March 30,86,29,2
 British Columbia,March 31,43,38,5
 British Columbia,April 1,53,99,1
 British Columbia,April 2,55,0,6
+British Columbia,April 2,55,0,6
+British Columbia,April 3,53,32,4
+British Columbia,April 4,29,30,3
 Alberta,January 25,0,0,0
 Alberta,January 26,0,0,0
 Alberta,January 27,0,0,0
@@ -137,6 +140,8 @@ Alberta,March 30,29,0,5
 Alberta,March 31,64,0,1
 Alberta,April 1,117,0,0
 Alberta,April 2,97,0,2
+Alberta,April 3,107,22,5
+Alberta,April 4,106,0,2
 Saskatchewan,January 25,0,0,0
 Saskatchewan,January 26,0,0,0
 Saskatchewan,January 27,0,0,0
@@ -207,6 +212,7 @@ Saskatchewan,March 31,8,0,0
 Saskatchewan,April 1,9,9,1
 Saskatchewan,April 2,13,0,0
 Saskatchewan,April 3,14,0,0
+Saskatchewan,April 4,11,7,0
 Manitoba,January 25,0,0,0
 Manitoba,January 26,0,0,0
 Manitoba,January 27,0,0,0
@@ -277,6 +283,7 @@ Manitoba,March 31,7,0,0
 Manitoba,April 1,24,0,0
 Manitoba,April 2,40,11,0
 Manitoba,April 3,15,0,1
+Manitoba,April 4,12,6,0
 Ontario,January 25,1,0,0
 Ontario,January 26,0,0,0
 Ontario,January 27,1,0,0
@@ -347,6 +354,7 @@ Ontario,March 31,260,80,0
 Ontario,April 1,426,0,0
 Ontario,April 2,401,0,16
 Ontario,April 3,462,0,14
+Ontario,April 4,375,196,27
 Quebec,January 25,0,0,0
 Quebec,January 26,0,0,0
 Quebec,January 27,0,0,0
@@ -417,6 +425,7 @@ Quebec,March 31,732,0,6
 Quebec,April 1,449,0,2
 Quebec,April 2,907,0,3
 Quebec,April 3,583,0,25
+Quebec,April 4,896,0,14
 New Brunswick,January 25,0,0,0
 New Brunswick,January 26,0,0,0
 New Brunswick,January 27,0,0,0
@@ -487,6 +496,7 @@ New Brunswick,March 31,2,9,0
 New Brunswick,April 1,11,5,0
 New Brunswick,April 2,10,0,0
 New Brunswick,April 3,4,0,0
+New Brunswick,April 4,3,14,0
 Nova Scotia,January 25,0,0,0
 Nova Scotia,January 26,0,0,0
 Nova Scotia,January 27,0,0,0
@@ -557,6 +567,7 @@ Nova Scotia,March 31,20,0,0
 Nova Scotia,April 1,26,0,0
 Nova Scotia,April 2,20,0,0
 Nova Scotia,April 3,14,0,0
+Nova Scotia,April 4,29,40,0
 Prince Edward Island,January 25,0,0,0
 Prince Edward Island,January 26,0,0,0
 Prince Edward Island,January 27,0,0,0
@@ -627,6 +638,7 @@ Prince Edward Island,March 31,3,0,0
 Prince Edward Island,April 1,0,0,0
 Prince Edward Island,April 2,1,0,0
 Prince Edward Island,April 3,0,3,0
+Prince Edward Island,April 4,0,2,0
 Newfoundland and Labrador,January 25,0,0,0
 Newfoundland and Labrador,January 26,0,0,0
 Newfoundland and Labrador,January 27,0,0,0
@@ -697,6 +709,7 @@ Newfoundland and Labrador,March 31,4,0,0
 Newfoundland and Labrador,April 1,4,0,0
 Newfoundland and Labrador,April 2,8,0,0
 Newfoundland and Labrador,April 3,12,1,0
+Newfoundland and Labrador,April 4,8,7,0
 Yukon,January 25,0,0,0
 Yukon,January 26,0,0,0
 Yukon,January 27,0,0,0
