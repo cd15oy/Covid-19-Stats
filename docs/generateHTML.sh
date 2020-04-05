@@ -1,1 +1,1 @@
-pandoc --metadata pagetitle="Canadian Covid-19 Stats"-s -f markdown -t html --standalone -o index.html < page.md
+pandoc --metadata pagetitle="Canadian Covid-19 Stats"-s -f markdown -t html --standalone --css styles.css -o index.html < page.md
