@@ -148,6 +148,7 @@ Alberta,April 4,106,0,2
 Alberta,April 5,69,83,3
 Alberta,April 6,98,0,1
 Alberta,April 7,25,86,2
+Alberta,April 8,50,72,3
 Saskatchewan,January 25,0,0,0
 Saskatchewan,January 26,0,0,0
 Saskatchewan,January 27,0,0,0
@@ -222,6 +223,7 @@ Saskatchewan,April 4,11,7,0
 Saskatchewan,April 5,18,12,0
 Saskatchewan,April 6,4,14,0
 Saskatchewan,April 7,7,7,0
+Saskatchewan,April 8,11,15,0
 Manitoba,January 25,0,0,0
 Manitoba,January 26,0,0,0
 Manitoba,January 27,0,0,0
@@ -296,6 +298,7 @@ Manitoba,April 4,12,6,0
 Manitoba,April 5,9,0,0
 Manitoba,April 6,1,0,0
 Manitoba,April 7,13,0,0
+Manitoba,April 8,4,69,0
 Ontario,January 25,1,0,0
 Ontario,January 26,0,0,0
 Ontario,January 27,1,0,0
@@ -370,6 +373,7 @@ Ontario,April 4,375,196,27
 Ontario,April 5,408,0,25
 Ontario,April 6,309,0,13
 Ontario,April 7,379,0,21
+Ontario,April 8,550,0,21
 Quebec,January 25,0,0,0
 Quebec,January 26,0,0,0
 Quebec,January 27,0,0,0
@@ -444,6 +448,7 @@ Quebec,April 4,896,0,14
 Quebec,April 5,947,0,19
 Quebec,April 6,636,0,27
 Quebec,April 7,760,0,29
+Quebec,April 8,691,0,25
 New Brunswick,January 25,0,0,0
 New Brunswick,January 26,0,0,0
 New Brunswick,January 27,0,0,0
@@ -518,6 +523,7 @@ New Brunswick,April 4,3,14,0
 New Brunswick,April 5,3,0,0
 New Brunswick,April 6,2,0,0
 New Brunswick,April 7,2,9,0
+New Brunswick,April 8,3,0,0
 Nova Scotia,January 25,0,0,0
 Nova Scotia,January 26,0,0,0
 Nova Scotia,January 27,0,0,0
@@ -592,6 +598,7 @@ Nova Scotia,April 4,29,40,0
 Nova Scotia,April 5,26,0,0
 Nova Scotia,April 6,31,0,0
 Nova Scotia,April 7,17,0,1
+Nova Scotia,April 8,32,0,0
 Prince Edward Island,January 25,0,0,0
 Prince Edward Island,January 26,0,0,0
 Prince Edward Island,January 27,0,0,0
@@ -666,6 +673,7 @@ Prince Edward Island,April 4,0,2,0
 Prince Edward Island,April 5,0,0,0
 Prince Edward Island,April 6,0,3,0
 Prince Edward Island,April 7,0,0,0
+Prince Edward Island,April 8,3,0,0
 Newfoundland and Labrador,January 25,0,0,0
 Newfoundland and Labrador,January 26,0,0,0
 Newfoundland and Labrador,January 27,0,0,0
@@ -740,6 +748,7 @@ Newfoundland and Labrador,April 4,8,7,0
 Newfoundland and Labrador,April 5,0,0,0
 Newfoundland and Labrador,April 6,9,4,1
 Newfoundland and Labrador,April 7,2,17,0
+Newfoundland and Labrador,April 8,4,25,0
 Yukon,January 25,0,0,0
 Yukon,January 26,0,0,0
 Yukon,January 27,0,0,0
