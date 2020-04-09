@@ -1,8 +1,5 @@
 import matplotlib.pyplot as plt
-
-#I added a new plot to make it easy to compare the number of new cases vs the number of recovered or deceased cases
-#Reporting of recovered numbers is a little wonky in most provinces, they tend to report a bunch all at once, instead of reporting a few each day as they happen so right now most of the plots are ugly. 
-#also, I was going to have the script grab a csv from https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html?topic=tilelink but the csv there doesn't include recovered numbers. Since I'd have to continue grabbing recovered numbers manually anyway I didn't bother grabbing that csv 
+import os 
 
 
 #I know, it all looks gross. Don't worry about it. 
@@ -11,47 +8,135 @@ import matplotlib.pyplot as plt
 provinces = [] 
 data = []
 
-csv_columns = None
+csv_columns = "Province,Date,Infected,Recovered,Deceased"
 
-with open("stats.csv" , 'r') as inF:
-    province = None
-    for row in inF:
-        if csv_columns is None:
-            csv_columns = row.strip().split(",")
-            continue
+path = "COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/"
 
-        line = row.split(",")
-        cur_province = line[0].strip()
+files = os.listdir(path) 
 
-        # that is, if this is a new province to add
-        if cur_province not in provinces:
-            provinces.append(cur_province)
+files = sorted(files)
 
-            # if there was a previous province
-            if province is not None:
-                data.append(province)
+dataDict = dict() 
+provinces = ["Ontario","Manitoba","New Brunswick","Newfoundland and Labrador","Northwest Territories","Nova Scotia","Prince Edward Island","Quebec","Saskatchewan","Yukon","Alberta","Nunavut","British Columbia"]
+for p in provinces:
+    dataDict[p] = [["Date", "01-21"],["Infected",0],["Recovered",0],["Deceased",0]]
+
+
+def floatOrZero(x):
+    try:
+        return float(x)
+    except ValueError:
+        return 0 
+
+#iterate through each file to grab the total counts from each day for each province
+for fl in files:
+    if fl == ".gitignore" or fl == "README.md":
+        continue 
+
+    with open(path + fl, 'r') as inF: 
+        hasData = dict()
+        for prov in provinces:
+            hasData[prov] = False
+
+        date = fl.split("-")
+
+        for l in inF:
+            line = l.split(",")
+
             
-            province = [[],[],[],[]] 
-            province[0].append(csv_columns[1])
-            province[1].append(csv_columns[2])
-            province[2].append(csv_columns[3])
-            province[3].append(csv_columns[4])
+
+            #The data source changed the CSV format on 3-21 
+            if int(date[0]) <= 3 and int(date[1]) <= 21: 
+                prov = line[0].strip()
+                
+                #If this line is a province
+                if prov in provinces:
+                    hasData[prov] = True #grab the data 
+                    dataDict[prov][0].append(date[0] + "-" + date[1])
+                    dataDict[prov][1].append(floatOrZero(line[3]))
+                    dataDict[prov][2].append(floatOrZero(line[5]))
+                    dataDict[prov][3].append(floatOrZero(line[4]))
+               
+            else:
+              
+                prov = line[2].strip()
+               
+                if prov in provinces:
+                    hasData[prov] = True
+                    dataDict[prov][0].append(date[0] + "-" + date[1])
+                    dataDict[prov][1].append(floatOrZero(line[7]))
+                    dataDict[prov][2].append(floatOrZero(line[9]))
+                    dataDict[prov][3].append(floatOrZero(line[8]))
+                 
+        #if this day has no data for any province, repeat yesterdays values 
+        for x in provinces:
+            if not hasData[x]:
+                dataDict[x][0].append(date[0] + "-" + date[1])
+                dataDict[x][1].append(dataDict[x][1][-1])
+                dataDict[x][2].append(dataDict[x][2][-1])
+                dataDict[x][3].append(dataDict[x][3][-1])
+             
+#move the data to the data list that the rest of the script expects
+for p in provinces:
+    data.append(dataDict[p])
+
+#Convert the total counts, to daily change 
+for p,i in zip(provinces, range(len(provinces))):
+    oldValues = [0,0,0,0]
+    for col in range(1, len(data[i])):
+        for day in range(1, len(data[i][col])):
+            val = data[i][col][day]
+
+            print(val)
+            print(oldValues[col])
+            data[i][col][day] = max(val - oldValues[col],0)
+            oldValues[col] = val 
+
+print(dataDict["British Columbia"])
+print(len(dataDict["British Columbia"][0]))
+print(len(dataDict["British Columbia"][1]))
+
+# with open("stats.csv" , 'r') as inF:
+#     province = None
+#     for row in inF:
+#         if csv_columns is None:
+#             csv_columns = row.strip().split(",")
+#             continue
+
+#         line = row.split(",")
+#         cur_province = line[0].strip()
+
+#         # that is, if this is a new province to add
+#         if cur_province not in provinces:
+#             provinces.append(cur_province)
+
+#             # if there was a previous province
+#             if province is not None:
+#                 data.append(province)
+            
+#             province = [[],[],[],[]] 
+#             province[0].append(csv_columns[1])
+#             province[1].append(csv_columns[2])
+#             province[2].append(csv_columns[3])
+#             province[3].append(csv_columns[4])
 
 
-        line = [float(x.strip()) for x in row.split(",")[2:]]
-        province[0].append(row.split(',')[1].strip())
-        province[1].append(line[0])
-        province[2].append(line[1])
-        province[3].append(line[2])
+#         line = [float(x.strip()) for x in row.split(",")[2:]]
+#         province[0].append(row.split(',')[1].strip())
+#         province[1].append(line[0])
+#         province[2].append(line[1])
+#         province[3].append(line[2])
 
 
 markdown = "" 
-for province,index in zip(provinces, range(len(provinces)-1)):
+for province,index in zip(provinces, range(len(provinces))):
     markdown += "# " +province + "\n"
     for plot in range(1,4):
+      
         stats = data[index]
         total=0
         totalList = []
+       
         for x in stats[plot][1:]:
             total += x 
             totalList.append(total) 
@@ -64,6 +149,7 @@ for province,index in zip(provinces, range(len(provinces)-1)):
                 xTickVals[x] = stats[0][1:][x]
         plt.xticks(range(len(stats[0])), xTickVals)
         plt.xlabel("Date")
+       
         stepSize = int(0.05*max(totalList))
         if stepSize == 0:
             stepSize = 1
@@ -119,6 +205,6 @@ for province,index in zip(provinces, range(len(provinces)-1)):
     markdown += '![](' + province.replace(' ','%20') + "-Trends.png " + '"' + province + "-Trends" + '")\n\n'
 
 markdown += "# Source\n"
-markdown += "All counts taken from [CTV](https://www.ctvnews.ca/health/coronavirus/tracking-every-case-of-covid-19-in-canada-1.4852102)\n\n"
+markdown += "All counts taken from [John Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)\n\n"
 with open("docs/page.md", 'w') as outF:
     outF.write(markdown)

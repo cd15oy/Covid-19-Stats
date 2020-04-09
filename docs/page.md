@@ -1,41 +1,15 @@
-# British Columbia
-## British Columbia-Infected
-![](British%20Columbia-Infected.png "British Columbia-Infected")
+# Ontario
+## Ontario-Infected
+![](Ontario-Infected.png "Ontario-Infected")
 
-## British Columbia-Recovered
-![](British%20Columbia-Recovered.png "British Columbia-Recovered")
+## Ontario-Recovered
+![](Ontario-Recovered.png "Ontario-Recovered")
 
-## British Columbia-Deceased
-![](British%20Columbia-Deceased.png "British Columbia-Deceased")
+## Ontario-Deceased
+![](Ontario-Deceased.png "Ontario-Deceased")
 
-## British Columbia-Trends
-![](British%20Columbia-Trends.png "British Columbia-Trends")
-
-# Alberta
-## Alberta-Infected
-![](Alberta-Infected.png "Alberta-Infected")
-
-## Alberta-Recovered
-![](Alberta-Recovered.png "Alberta-Recovered")
-
-## Alberta-Deceased
-![](Alberta-Deceased.png "Alberta-Deceased")
-
-## Alberta-Trends
-![](Alberta-Trends.png "Alberta-Trends")
-
-# Saskatchewan
-## Saskatchewan-Infected
-![](Saskatchewan-Infected.png "Saskatchewan-Infected")
-
-## Saskatchewan-Recovered
-![](Saskatchewan-Recovered.png "Saskatchewan-Recovered")
-
-## Saskatchewan-Deceased
-![](Saskatchewan-Deceased.png "Saskatchewan-Deceased")
-
-## Saskatchewan-Trends
-![](Saskatchewan-Trends.png "Saskatchewan-Trends")
+## Ontario-Trends
+![](Ontario-Trends.png "Ontario-Trends")
 
 # Manitoba
 ## Manitoba-Infected
@@ -50,32 +24,6 @@
 ## Manitoba-Trends
 ![](Manitoba-Trends.png "Manitoba-Trends")
 
-# Ontario
-## Ontario-Infected
-![](Ontario-Infected.png "Ontario-Infected")
-
-## Ontario-Recovered
-![](Ontario-Recovered.png "Ontario-Recovered")
-
-## Ontario-Deceased
-![](Ontario-Deceased.png "Ontario-Deceased")
-
-## Ontario-Trends
-![](Ontario-Trends.png "Ontario-Trends")
-
-# Quebec
-## Quebec-Infected
-![](Quebec-Infected.png "Quebec-Infected")
-
-## Quebec-Recovered
-![](Quebec-Recovered.png "Quebec-Recovered")
-
-## Quebec-Deceased
-![](Quebec-Deceased.png "Quebec-Deceased")
-
-## Quebec-Trends
-![](Quebec-Trends.png "Quebec-Trends")
-
 # New Brunswick
 ## New Brunswick-Infected
 ![](New%20Brunswick-Infected.png "New Brunswick-Infected")
@@ -88,6 +36,32 @@
 
 ## New Brunswick-Trends
 ![](New%20Brunswick-Trends.png "New Brunswick-Trends")
+
+# Newfoundland and Labrador
+## Newfoundland and Labrador-Infected
+![](Newfoundland%20and%20Labrador-Infected.png "Newfoundland and Labrador-Infected")
+
+## Newfoundland and Labrador-Recovered
+![](Newfoundland%20and%20Labrador-Recovered.png "Newfoundland and Labrador-Recovered")
+
+## Newfoundland and Labrador-Deceased
+![](Newfoundland%20and%20Labrador-Deceased.png "Newfoundland and Labrador-Deceased")
+
+## Newfoundland and Labrador-Trends
+![](Newfoundland%20and%20Labrador-Trends.png "Newfoundland and Labrador-Trends")
+
+# Northwest Territories
+## Northwest Territories-Infected
+![](Northwest%20Territories-Infected.png "Northwest Territories-Infected")
+
+## Northwest Territories-Recovered
+![](Northwest%20Territories-Recovered.png "Northwest Territories-Recovered")
+
+## Northwest Territories-Deceased
+![](Northwest%20Territories-Deceased.png "Northwest Territories-Deceased")
+
+## Northwest Territories-Trends
+![](Northwest%20Territories-Trends.png "Northwest Territories-Trends")
 
 # Nova Scotia
 ## Nova Scotia-Infected
@@ -115,18 +89,31 @@
 ## Prince Edward Island-Trends
 ![](Prince%20Edward%20Island-Trends.png "Prince Edward Island-Trends")
 
-# Newfoundland and Labrador
-## Newfoundland and Labrador-Infected
-![](Newfoundland%20and%20Labrador-Infected.png "Newfoundland and Labrador-Infected")
+# Quebec
+## Quebec-Infected
+![](Quebec-Infected.png "Quebec-Infected")
 
-## Newfoundland and Labrador-Recovered
-![](Newfoundland%20and%20Labrador-Recovered.png "Newfoundland and Labrador-Recovered")
+## Quebec-Recovered
+![](Quebec-Recovered.png "Quebec-Recovered")
 
-## Newfoundland and Labrador-Deceased
-![](Newfoundland%20and%20Labrador-Deceased.png "Newfoundland and Labrador-Deceased")
+## Quebec-Deceased
+![](Quebec-Deceased.png "Quebec-Deceased")
 
-## Newfoundland and Labrador-Trends
-![](Newfoundland%20and%20Labrador-Trends.png "Newfoundland and Labrador-Trends")
+## Quebec-Trends
+![](Quebec-Trends.png "Quebec-Trends")
+
+# Saskatchewan
+## Saskatchewan-Infected
+![](Saskatchewan-Infected.png "Saskatchewan-Infected")
+
+## Saskatchewan-Recovered
+![](Saskatchewan-Recovered.png "Saskatchewan-Recovered")
+
+## Saskatchewan-Deceased
+![](Saskatchewan-Deceased.png "Saskatchewan-Deceased")
+
+## Saskatchewan-Trends
+![](Saskatchewan-Trends.png "Saskatchewan-Trends")
 
 # Yukon
 ## Yukon-Infected
@@ -141,18 +128,44 @@
 ## Yukon-Trends
 ![](Yukon-Trends.png "Yukon-Trends")
 
-# Northwest Territories
-## Northwest Territories-Infected
-![](Northwest%20Territories-Infected.png "Northwest Territories-Infected")
+# Alberta
+## Alberta-Infected
+![](Alberta-Infected.png "Alberta-Infected")
 
-## Northwest Territories-Recovered
-![](Northwest%20Territories-Recovered.png "Northwest Territories-Recovered")
+## Alberta-Recovered
+![](Alberta-Recovered.png "Alberta-Recovered")
 
-## Northwest Territories-Deceased
-![](Northwest%20Territories-Deceased.png "Northwest Territories-Deceased")
+## Alberta-Deceased
+![](Alberta-Deceased.png "Alberta-Deceased")
 
-## Northwest Territories-Trends
-![](Northwest%20Territories-Trends.png "Northwest Territories-Trends")
+## Alberta-Trends
+![](Alberta-Trends.png "Alberta-Trends")
+
+# Nunavut
+## Nunavut-Infected
+![](Nunavut-Infected.png "Nunavut-Infected")
+
+## Nunavut-Recovered
+![](Nunavut-Recovered.png "Nunavut-Recovered")
+
+## Nunavut-Deceased
+![](Nunavut-Deceased.png "Nunavut-Deceased")
+
+## Nunavut-Trends
+![](Nunavut-Trends.png "Nunavut-Trends")
+
+# British Columbia
+## British Columbia-Infected
+![](British%20Columbia-Infected.png "British Columbia-Infected")
+
+## British Columbia-Recovered
+![](British%20Columbia-Recovered.png "British Columbia-Recovered")
+
+## British Columbia-Deceased
+![](British%20Columbia-Deceased.png "British Columbia-Deceased")
+
+## British Columbia-Trends
+![](British%20Columbia-Trends.png "British Columbia-Trends")
 
 # Source
 All counts taken from [CTV](https://www.ctvnews.ca/health/coronavirus/tracking-every-case-of-covid-19-in-canada-1.4852102)
