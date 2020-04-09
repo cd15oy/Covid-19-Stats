@@ -168,5 +168,5 @@
 ![](British%20Columbia-Trends.png "British Columbia-Trends")
 
 # Source
-All counts taken from [CTV](https://www.ctvnews.ca/health/coronavirus/tracking-every-case-of-covid-19-in-canada-1.4852102)
+All counts taken from [John Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)
 
