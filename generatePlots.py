@@ -87,14 +87,9 @@ for p,i in zip(provinces, range(len(provinces))):
         for day in range(1, len(data[i][col])):
             val = data[i][col][day]
 
-            print(val)
-            print(oldValues[col])
             data[i][col][day] = max(val - oldValues[col],0)
             oldValues[col] = val 
 
-print(dataDict["British Columbia"])
-print(len(dataDict["British Columbia"][0]))
-print(len(dataDict["British Columbia"][1]))
 
 # with open("stats.csv" , 'r') as inF:
 #     province = None
