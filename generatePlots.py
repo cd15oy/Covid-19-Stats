@@ -126,6 +126,33 @@ for p,i in zip(provinces, range(len(provinces))):
 markdown = "" 
 for province,index in zip(provinces, range(len(provinces))):
     markdown += "# " +province + "\n"
+
+    #Here we calculate the average daily percent change in deaths over the last week 
+    total=0
+    totalList = []
+    for x in data[index][3][1:]:
+        total += x 
+        totalList.append(total) 
+    
+    def protDiv(x,y):
+        if y == 0:
+            return (x+1)/(y+1)
+        else:
+            return x/y
+
+    estimateLength = 5
+    estimatedDailyPercentChange = sum([protDiv(float(x),y) for x,y in zip(totalList[-estimateLength:],totalList[-estimateLength-1:-1])])/estimateLength
+    aveDailyDeaths = sum(data[index][3][-estimateLength:])/float(estimateLength)
+
+    #This number will be used to estimate the average daily percent change in infections 2 weeks ago 
+    #The estimate is for 2 weeks ago since the average time to death is around 2 weeks 
+    #This VERY ROUGH estimate can then be used to plot the expected infections along with the reported infections to better visualize how things are changing
+    #This should not be interpreted as a real projection. I am not a professional, I just wanted a rough comparison between the reported numbers today, and how things looked a couple weeks ago
+    #I'm using deaths to estimate infections because in theory the deaths should be less influenced by sampling biases, that is assuming the majority of deaths are by covid-19 are correctly attributed to covid-19
+
+    #median time to death taken from https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30566-3/fulltext
+    #median 18 with values from 15 to 22 
+
     for plot in range(1,4):
       
         stats = data[index]
@@ -149,6 +176,7 @@ for province,index in zip(provinces, range(len(provinces))):
         if stepSize == 0:
             stepSize = 1
         plt.yticks(range(0,int(max(totalList) + 0.1*max(totalList)+1), stepSize))
+        plt.ylim(0, max(totalList))
         plt.title(province + "-" + stats[plot][0])
         markdown += "## " + province + "-" + stats[plot][0] + "\n"
         xAx = stats[0][1:]
@@ -157,7 +185,22 @@ for province,index in zip(provinces, range(len(provinces))):
         
         p1 = plt.bar(xAx,totalList)
         p2 = plt.bar(xAx,yAx)
-        plt.legend((p1[0], p2[0]), ('Total', 'Daily'))
+
+        if plot == 1 and aveDailyDeaths >= 1:
+            #Since we have data on a range of time to deaths, I'm plotting a range of expected infections 
+            colors = ["red", "yellow", "green"]
+            lines = [] 
+            timeToDeath = 15
+            for i in range(3):
+                expectedInfections = [x for x in totalList] 
+                for x in range(-timeToDeath, 0, 1):
+                    expectedInfections[x] = expectedInfections[x-1]*estimatedDailyPercentChange 
+                lines.append(plt.plot(xAx, expectedInfections, color=colors[i]))
+                timeToDeath += 3
+            plt.legend((p1[0], p2[0], lines[0][0], lines[1][0], lines[2][0]), ('Total', 'Daily', 'Expected-15TTD', 'Expected-18TTD', 'Expected-21TTD', ))
+        else:
+            plt.legend((p1[0], p2[0]), ('Total', 'Daily'))
+
         plt.savefig("docs/"+province + "-" + stats[plot][0] + ".png")
         plt.close()
 
