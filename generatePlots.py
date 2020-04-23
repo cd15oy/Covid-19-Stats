@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import os 
+from statistics import median
+from statistics import mean 
 
 
 #I know, it all looks gross. Don't worry about it. 
@@ -127,32 +129,6 @@ markdown = ""
 for province,index in zip(provinces, range(len(provinces))):
     markdown += "# " +province + "\n"
 
-    #Here we calculate the average daily percent change in deaths over the last week 
-    total=0
-    totalList = []
-    for x in data[index][3][1:]:
-        total += x 
-        totalList.append(total) 
-    
-    def protDiv(x,y):
-        if y == 0:
-            return (x+1)/(y+1)
-        else:
-            return x/y
-
-    estimateLength = 5
-    estimatedDailyPercentChange = sum([protDiv(float(x),y) for x,y in zip(totalList[-estimateLength:],totalList[-estimateLength-1:-1])])/estimateLength
-    aveDailyDeaths = sum(data[index][3][-estimateLength:])/float(estimateLength)
-
-    #This number will be used to estimate the average daily percent change in infections 2 weeks ago 
-    #The estimate is for 2 weeks ago since the average time to death is around 2 weeks 
-    #This VERY ROUGH estimate can then be used to plot the expected infections along with the reported infections to better visualize how things are changing
-    #This should not be interpreted as a real projection. I am not a professional, I just wanted a rough comparison between the reported numbers today, and how things looked a couple weeks ago
-    #I'm using deaths to estimate infections because in theory the deaths should be less influenced by sampling biases, that is assuming the majority of deaths are by covid-19 are correctly attributed to covid-19
-
-    #median time to death taken from https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30566-3/fulltext
-    #median 18 with values from 15 to 22 
-
     for plot in range(1,4):
       
         stats = data[index]
@@ -186,18 +162,58 @@ for province,index in zip(provinces, range(len(provinces))):
         p1 = plt.bar(xAx,totalList)
         p2 = plt.bar(xAx,yAx)
 
-        if plot == 1 and aveDailyDeaths >= 1:
-            #Since we have data on a range of time to deaths, I'm plotting a range of expected infections 
-            colors = ["red", "yellow", "green"]
-            lines = [] 
-            timeToDeath = 15
-            for i in range(3):
+        if plot == 1:
+
+            #I'm going to plot an estimated expected infections based on the average daily percent change in deaths for the few weeks
+            #this provides a visualization of how the rate of infections has changed over the course of the lock down
+            #Comparing the most current estimate, with the actual observed infections also provides an interesting snapshot of how things are going 
+            colors = ["red", "purple","pink", "yellow", "orange", "green","blue"]
+            labels = ['Total', 'Daily']
+            lines = [p1, p2] 
+            timeToDeath = 18 #The median TTD
+            totalDeaths=0
+            totalDeathsList = []
+            estimateStep = 5 
+            for x in data[index][3][1:]:
+                totalDeaths += x 
+                totalDeathsList.append(totalDeaths) 
+
+            #This loop estimates the percent daily change for a variety of times over the lockdown 
+            #today, 5 days ago, ten days ago, 15 days ago, etc 
+            #each of these estimates is used to plot a projection starting from 18 days ago
+            for i in range(0, 35, estimateStep):
+                #Here we calculate the average daily percent change in deaths over the week 
+            
+                def protDiv(x,y):
+                    if y == 0:
+                        return (x+1)/(y+1)
+                    else:
+                        return x/y
+
+                
+                estimateLength = 5#estimate the mean percent change over the last 5 days
+                
+                estimatedDailyPercentChange = mean([protDiv(float(x),y) for x,y in zip(totalDeathsList[-(i+estimateLength):len(totalDeathsList)-i],totalDeathsList[-(estimateLength+i)-1:-(i+1)])])
+                aveDailyDeaths = sum(data[index][3][-(i+estimateLength):len(data[index][3])-i])/float(estimateLength)
+
+              
+                #This number will be used to estimate the average daily percent change in infections 18 days ago ie the median TTD
+                #This VERY ROUGH estimate can then be used to plot the expected infections along with the reported infections to better visualize how things are changing
+                #This should not be interpreted as a real projection. I am not a professional, I just wanted a rough comparison between the reported numbers today, and how things looked a couple weeks ago
+                #I'm using deaths to estimate infections because in theory the deaths should be less influenced by sampling biases, that is assuming the majority of deaths are by covid-19 are correctly attributed to covid-19
+
+                #median time to death taken from https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30566-3/fulltext
+                #median 18 with values from 15 to 22 
                 expectedInfections = [x for x in totalList] 
-                for x in range(-timeToDeath, 0, 1):
+                for x in range(-(timeToDeath), 0, 1):
                     expectedInfections[x] = expectedInfections[x-1]*estimatedDailyPercentChange 
-                lines.append(plt.plot(xAx, expectedInfections, color=colors[i]))
-                timeToDeath += 3
-            plt.legend((p1[0], p2[0], lines[0][0], lines[1][0], lines[2][0]), ('Total', 'Daily', 'Expected-15TTD', 'Expected-18TTD', 'Expected-21TTD', ))
+                
+
+                if aveDailyDeaths > 1: #only plot the results if the ave daily deaths for this time period > 1
+                    lines.append(plt.plot(xAx, expectedInfections, color=colors[int(i/estimateStep)]))
+                    labels.append('ADPC-'+str(i))
+                
+            plt.legend((x[0] for x in lines),(x for x in labels))
         else:
             plt.legend((p1[0], p2[0]), ('Total', 'Daily'))
 
